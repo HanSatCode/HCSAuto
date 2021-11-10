@@ -31,7 +31,7 @@ except :
 else :
     readCSV = csv.reader(f)
     for row in readCSV :
-        database.append([[row[0]],[row[1]],[row[2]]])
+        database.append([[row[0]],[row[1]],[row[2]],[row[3]]])
     f.close
 
 # ====================================================================================================
@@ -72,7 +72,7 @@ async def on_ready() :
             levelSelector = Select(levelSelect)
             levelSelector.select_by_value('4')
 
-            driver.find_element_by_xpath('//*[@id="orgname"]').send_keys('') # 학교 이름을 입력해주세요
+            driver.find_element_by_xpath('//*[@id="orgname"]').send_keys(''.join(database[x][0]))
             driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[1]/table/tbody/tr[3]/td[2]/button').click()
 
             time.sleep(0.5)
@@ -84,8 +84,8 @@ async def on_ready() :
 
             time.sleep(1)
             
-            driver.find_element_by_xpath('//*[@id="user_name_input"]').send_keys(''.join(database[x][0]))
-            driver.find_element_by_xpath('//*[@id="birthday_input"]').send_keys(''.join(database[x][1]))
+            driver.find_element_by_xpath('//*[@id="user_name_input"]').send_keys(''.join(database[x][1]))
+            driver.find_element_by_xpath('//*[@id="birthday_input"]').send_keys(''.join(database[x][2]))
 
             time.sleep(0.5)
 
@@ -134,7 +134,7 @@ async def on_ready() :
                 if pwn[y] == str('빈칸') :
                     pwn[y] = '100'
 
-            realPWD = list(str(database[x][2]))
+            realPWD = list(str(database[x][3]))
 
             while "'" in realPWD :    
 	            realPWD.remove("'")
