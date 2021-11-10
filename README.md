@@ -2,8 +2,8 @@
 
 
 ## 소개
-HCSAuto(은)는 전작 윈도우와 리눅스 환경에서 백그라운드 작업으로 여려명의 사람들을 자동으로 자가진단을 수행하는 프로그램 입니다.<br/>
-이 프로그램은 Python Selenium와 ChromeDriver을 기반으로 제작되었습니다.
+HCSAuto(은)는 Windows 환경에서 백그라운드 작업으로 여려명의 사람들을 자동으로 자가진단을 수행하는 프로그램 입니다.<br/>
+이 프로그램은 'Python Selenium' 및 'ChromeDriver'을 기반으로 제작되었습니다.
 
 ## 주의
 ```
