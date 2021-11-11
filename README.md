@@ -44,4 +44,5 @@ self.process = subprocess.Popen(cmd, env=self.env,
                                 stdout=self.log_file,
                                 stderr=self.log_file,
                                 stdin=PIPE, # 쉼표 유무 주의
-                                creationflags=0x08000000) # 인자 추가 
+                                creationflags=0x08000000) # 인자 추가
+```
