@@ -18,13 +18,30 @@ srcPath = srcPath.replace("Discord.pyw", "")
 # ====================================================================================================
 
 database = list()
+discord_Set = list()
 
 try : 
-    f = open(str(srcPath)+"Data.csv",'r',encoding='utf-8-sig')
+    f = open(str(srcPath)+"Discord_Set.csv",'r',encoding='utf-8-sig')
+    readCSV = csv.reader(f)
+    for row in readCSV :
+        discord_Set.append([row[0],row[1]])
+    f.close
 except :
     @bot.event
     async def on_ready() :
-        channel = bot.get_channel() # 괄호안에 올릴 채널의 아이디를 입력해주세요
+        channel = bot.get_channel(int(''.join(discord_Set[0][0])))
+        Embed = discord.Embed(title="자가진단 실패 - 데이터를 읽을 수 없음", color=0xffcccc)
+        await channel.send(embed=Embed)
+        sys.exit()
+else :
+    print("Ready")
+
+try : 
+    f = open(str(srcPath)+"Member.csv",'r',encoding='utf-8-sig')
+except :
+    @bot.event
+    async def on_ready() :
+        channel = bot.get_channel(int(''.join(discord_Set[0][0])))
         Embed = discord.Embed(title="자가진단 실패 - 데이터를 읽을 수 없음", color=0xffcccc)
         await channel.send(embed=Embed)
         sys.exit()
@@ -40,7 +57,7 @@ else :
 async def on_ready() :
     await bot.change_presence(status=discord.Status.dnd, activity=discord.Game("자동으로 자가진단"))
 
-    channel = bot.get_channel() # 괄호안에 올릴 채널의 아이디를 입력해주세요
+    channel = bot.get_channel(int(''.join(discord_Set[0][0])))
     Embed = discord.Embed(title="자가진단 준비 중 - NULL", description="",color=0xb8b8b8)
     msg = await channel.send(embed=Embed)
 
@@ -48,7 +65,7 @@ async def on_ready() :
 
     try :
         for x in range (1, len(database)) :
-            Embed = discord.Embed(title="자가진단 진행 중 - " + str(''.join(database[x][0])),  color=0xffddab)
+            Embed = discord.Embed(title="자가진단 진행 중 - " + str(''.join(database[x][1])),  color=0xffddab)
             await msg.edit(embed=Embed)
             
             options = webdriver.ChromeOptions()
@@ -183,7 +200,7 @@ async def on_ready() :
 # ====================================================================================================
 
     except :
-        Embed = discord.Embed(title="자가진단 실패 - '" + str(''.join(database[x][0])) + "' 세션에서 중단됨", color=0xffcccc)
+        Embed = discord.Embed(title="자가진단 실패 - '" + str(''.join(database[x][1])) + "' 세션에서 중단됨", color=0xffcccc)
         await msg.edit(embed=Embed)
 
 # ====================================================================================================
@@ -196,4 +213,4 @@ async def on_ready() :
 
 # ====================================================================================================
 
-bot.run('') # Discord Developer Portal에서 발급받은 Bot의 Token을 입력해주세요
+bot.run(''.join(discord_Set[0][1]))
