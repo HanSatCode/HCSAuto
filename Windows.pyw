@@ -17,9 +17,9 @@ srcPath = srcPath.replace("Windows.pyw", "")
 database = list()
 
 try : 
-    f = open(str(srcPath)+"Data.csv",'r',encoding='utf-8-sig')
+    f = open(str(srcPath)+"Member.csv",'r',encoding='utf-8-sig')
 except :
-    ctypes.windll.user32.MessageBoxW(0, "데이터를 불러올 수 없습니다.\n폴더 안에 'Data.csv' 파일이 있는지 확인해 주세요.", "자가진단 실패", 0)
+    ctypes.windll.user32.MessageBoxW(0, "데이터를 불러올 수 없습니다.\n폴더 안에 'Member.csv' 파일이 있는지 확인해 주세요.", "자가진단 실패", 0)
     sys.exit()
 else :
     readCSV = csv.reader(f)
