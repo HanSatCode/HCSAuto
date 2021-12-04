@@ -56,7 +56,7 @@ try :
         driver.find_element_by_xpath('//*[@id="orgname"]').send_keys(''.join(database[x][0]))
         driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[1]/table/tbody/tr[3]/td[2]/button').click()
 
-        time.sleep(0.5)
+        time.sleep(1)
 
         driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[1]/ul').click()
         driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[2]/input').click()
@@ -68,7 +68,7 @@ try :
         driver.find_element_by_xpath('//*[@id="user_name_input"]').send_keys(''.join(database[x][1]))
         driver.find_element_by_xpath('//*[@id="birthday_input"]').send_keys(''.join(database[x][2]))
 
-        time.sleep(0.5)
+        time.sleep(1)
 
         driver.find_element_by_xpath('//*[@id="btnConfirm"]').click()
 
@@ -78,7 +78,7 @@ try :
 
         driver.find_element_by_xpath('//*[@id="password"]').click()
 
-        time.sleep(0.5)
+        time.sleep(1)
 
         key = [driver.find_element_by_xpath('//*[@id="password_mainDiv"]/div[8]/a[4]'),
                 driver.find_element_by_xpath('//*[@id="password_mainDiv"]/div[9]/a'),
@@ -146,7 +146,7 @@ try :
 
 # ====================================================================================================
 
-        time.sleep(1.5)
+        time.sleep(2)
 
         driver.find_element_by_class_name('btn').click()
 
@@ -157,7 +157,7 @@ try :
         driver.find_element_by_xpath('//*[@id="survey_q3a1"]').click()
         driver.find_element_by_xpath('//*[@id="btnConfirm"]').click()
 
-        time.sleep(0.5)
+        time.sleep(1)
 
         driver.quit()
 

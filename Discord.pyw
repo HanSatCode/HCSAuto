@@ -61,7 +61,7 @@ async def on_ready() :
     Embed = discord.Embed(title="자가진단 준비 중 - NULL", description="",color=0xb8b8b8)
     msg = await channel.send(embed=Embed)
 
-    time.sleep(0.5)
+    time.sleep(1)
 
     try :
         for x in range (1, len(database)) :
@@ -92,7 +92,7 @@ async def on_ready() :
             driver.find_element_by_xpath('//*[@id="orgname"]').send_keys(''.join(database[x][0]))
             driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[1]/table/tbody/tr[3]/td[2]/button').click()
 
-            time.sleep(0.5)
+            time.sleep(1)
 
             driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[1]/ul').click()
             driver.find_element_by_xpath('//*[@id="softBoardListLayer"]/div[2]/div[2]/input').click()
@@ -104,7 +104,7 @@ async def on_ready() :
             driver.find_element_by_xpath('//*[@id="user_name_input"]').send_keys(''.join(database[x][1]))
             driver.find_element_by_xpath('//*[@id="birthday_input"]').send_keys(''.join(database[x][2]))
 
-            time.sleep(0.5)
+            time.sleep(1)
 
             driver.find_element_by_xpath('//*[@id="btnConfirm"]').click()
 
@@ -114,7 +114,7 @@ async def on_ready() :
 
             driver.find_element_by_xpath('//*[@id="password"]').click()
 
-            time.sleep(0.5)
+            time.sleep(1)
 
             key = [driver.find_element_by_xpath('//*[@id="password_mainDiv"]/div[8]/a[4]'),
                     driver.find_element_by_xpath('//*[@id="password_mainDiv"]/div[9]/a'),
@@ -154,7 +154,7 @@ async def on_ready() :
             realPWD = list(str(database[x][3]))
 
             while "'" in realPWD :    
-	            realPWD.remove("'")
+                realPWD.remove("'")
             realPWD.remove("[")
             realPWD.remove("]")
 
@@ -182,7 +182,7 @@ async def on_ready() :
 
 # ====================================================================================================
 
-            time.sleep(1.5)
+            time.sleep(2)
 
             driver.find_element_by_class_name('btn').click()
 
@@ -193,7 +193,7 @@ async def on_ready() :
             driver.find_element_by_xpath('//*[@id="survey_q3a1"]').click()
             driver.find_element_by_xpath('//*[@id="btnConfirm"]').click()
 
-            time.sleep(0.5)
+            time.sleep(1)
 
             driver.quit()
 
