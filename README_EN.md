@@ -13,14 +13,14 @@ If you have any abnormal symptoms, you can stop using it and change it directly 
 The user himself is responsible for the damage that occurs after use.
 ```
 ## Setup
-Prior to use, [Chrome for desktop] (https://www.google.com/intl/ko/chrome/) and [ChromeDriver] (https://chromedriver.chromium.org/home)() are required.
+Prior to use, [Chrome for desktop](https://www.google.com/intl/ko/chrome/) and [ChromeDriver](https://chromedriver.chromium.org/home)() are required.
 ```
 1. Run and install the Chrome installer for desktop.
 2. Check the current version of Chrome for desktop by entering 'chrome://version/' in the address bar.
 3. Download the ChromeDriver for the Chrome version for the desktop.
 4. Insert the downloaded file into the 'src' folder of the package.
 ```
-For Python releases, [Python3] (https://www.python.org/) and Selenium) are required.
+For Python releases, [Python3](https://www.python.org/) and Selenium) are required.
 ```
 1. Download and install the 'Python3.x.x' installer.
 2. Open the 'command prompt (cmd)' to enter "pip3 install Selenium" and wait for the installation to complete.
