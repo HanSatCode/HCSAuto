@@ -18,7 +18,7 @@ HCSAuto(은)는 Windows 환경에서 백그라운드 작업으로 여려 명의 
 1. 데스크톱용 Chrome 설치 프로그램을 실행하여 설치합니다.
 2. 주소 표시줄에 'chrome://version/'을 입력하여 현재 데스크톱용 Chrome의 버전을 확인합니다.
 3. 데스크톱용 Chrome 버전에 맞는 ChromeDriver(을)를 다운로드해줍니다.
-4. 다운로드한 파일을 패키지의 'Driver' 폴더에 삽입합니다.
+4. 다운로드한 파일을 패키지의 'src' 폴더에 삽입합니다.
 ```
 Python 릴리즈의 경우, [Python3](https://www.python.org/) 및 Selenium(이)가 추가로 필요합니다.
 ```
