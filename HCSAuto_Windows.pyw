@@ -155,6 +155,7 @@ try :
         driver.find_element_by_xpath('//*[@id="survey_q1a1"]').click()
         driver.find_element_by_xpath('//*[@id="survey_q2a1"]').click()
         driver.find_element_by_xpath('//*[@id="survey_q3a1"]').click()
+        driver.find_element_by_xpath('//*[@id="survey_q4a1"]').click()
         driver.find_element_by_xpath('//*[@id="btnConfirm"]').click()
 
         time.sleep(1)
