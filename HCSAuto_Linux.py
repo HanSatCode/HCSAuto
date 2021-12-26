@@ -101,7 +101,7 @@ async def on_ready() :
             time.sleep(1)
             
             driver.find_element_by_xpath('//*[@id="user_name_input"]').send_keys(''.join(database[x][1]))
-            driver.find_element_by_xpath('//*[@id="birthday_input"]').send_keys(''.join(database[x][2]))
+            driver.find_element_by_xpath('//*[@id="birthday_input"]').send_keys(str(''.join(database[x][2])))
 
             time.sleep(1)
 
