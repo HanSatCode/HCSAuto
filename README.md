@@ -3,6 +3,10 @@
 
 
 ## 소개
+```
+이 프로그램은 2022년 2월 1일 이후로 새로운 기능 추가 및 버그 수정에 관한 업데이트가 중단됩니다.
+이 시간 이후로 프로그램이 목표에 대한 정상적으로 작동하는 것에 대해서 보장할 수 없습니다.
+```
 HCSAuto(은)는 Windows 환경에서 백그라운드 작업으로 여려 명의 사람들을 자동으로 자가진단을 수행하는 프로그램입니다.<br/>
 이 프로그램은 'Python Selenium' 및 'ChromeDriver'을 기반으로 제작되었습니다.
 
@@ -44,6 +48,6 @@ self.process = subprocess.Popen(cmd, env=self.env,
                                 close_fds=platform.system() != 'Windows',
                                 stdout=self.log_file,
                                 stderr=self.log_file,
-                                stdin=PIPE, # 쉼표 유무 주의
-                                creationflags=0x08000000) # 인자 추가
+                                stdin=PIPE,
+                                creationflags=0x08000000)
 ```
