@@ -2,12 +2,12 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FHanSatCode%2FHCSAuto&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
 
 
-## 소개
+# HCSAuto
 ```
 이 프로그램은 2022년 2월 1일 이후로 새로운 기능 추가 및 버그 수정에 관한 업데이트가 중단됩니다.
 이 시간 이후로 프로그램이 목표에 대한 정상적으로 작동하는 것에 대해서 보장할 수 없습니다.
 ```
-HCSAuto(은)는 Windows 환경에서 백그라운드 작업으로 여려 명의 사람들을 자동으로 자가진단을 수행하는 프로그램입니다.<br/>
+HCSAuto(은)는 Windows 및 환경에서 백그라운드 작업으로 여려 명의 사람들을 자동으로 자가진단을 수행하는 프로그램입니다.<br/>
 이 프로그램은 'Python Selenium' 및 'ChromeDriver'을 기반으로 제작되었습니다.
 
 ## 주의
