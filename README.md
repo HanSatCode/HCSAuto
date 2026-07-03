@@ -6,21 +6,10 @@
 HCSAuto는 Windows 및 Linux 환경에서 여러 사용자의 자가진단을 자동으로 수행하는 프로그램입니다.  
 이 프로그램은 **Python Selenium** 및 **ChromeDriver**를 기반으로 제작되었습니다.
 
-
-## ⚙️ 작동 원리 (How it Works)
-
-1. **사용자 데이터 로드**: `src/member.csv` 파일로부터 자가진단을 수행할 사용자 정보(학교명, 이름, 생년월일, 가상 비밀번호)를 파싱합니다.
-2. **브라우저 자동 구동**: `Selenium WebDriver`를 사용해 자가진단 공식 웹사이트에 접속합니다.
-3. **가상 키패드 매핑 및 로그인**: 보안 상 랜덤하게 배치되는 가상 키패드 버튼의 `aria-label` 속성을 실시간으로 읽어와 비밀번호 입력을 수행합니다.
-4. **설문 작성 및 제출**: 지정된 기본 설문(이상 증상 없음 등) 항목에 일괄 체크 후 자가진단을 제출합니다.
-5. **결과 알림**: 정상 완료 여부를 Windows Alert 알림창 또는 Discord Bot 메시지를 통해 발송합니다.
-
-
 ## ⚠️ 주의사항
 - 각 지역 및 학교/직장의 방역 수칙을 잘 지키며 안전하게 사용해 주세요.
 - 본인이나 진단 대상 분에게 조금이라도 이상 증상이 보인다면 바로 프로그램 사용을 멈추고, 공식 자가진단 앱이나 웹사이트에 직접 접속하셔서 상태를 변경해 주세요.
 - 프로그램 사용으로 인해 생길 수 있는 결과와 책임은 사용자 본인에게 있으니 늘 유의해서 사용해 주세요.
-
 
 ## 🛠️ 설치 및 설정
 
@@ -42,7 +31,6 @@ HCSAuto는 Windows 및 Linux 환경에서 여러 사용자의 자가진단을 �
    pip install selenium
    ```
 
-
 ## 🚀 사용 방법
 
 이 프로그램은 Discord 봇 알림 또는 Windows Alert 알림을 지원합니다.
@@ -60,7 +48,6 @@ HCSAuto는 Windows 및 Linux 환경에서 여러 사용자의 자가진단을 �
    - **Windows 알림**: `HCSAuto_Windows.pyw` 실행 (완료 후 백그라운드 구동)
    - **Discord 알림**: `HCSAuto_Discord.pyw` 또는 `HCSAuto_Linux.py` 실행
 
-
 ## 💡 팁 & 기타 설정
 
 ### ChromeDriver 콘솔 창 숨기기 (Windows)
@@ -77,6 +64,14 @@ self.process = subprocess.Popen(cmd, env=self.env,
                                 stdin=PIPE,
                                 creationflags=0x08000000)
 ```
+
+## ⚙️ 작동 원리
+
+1. **사용자 데이터 로드**: `src/member.csv` 파일로부터 자가진단을 수행할 사용자 정보(학교명, 이름, 생년월일, 가상 비밀번호)를 파싱합니다.
+2. **브라우저 자동 구동**: `Selenium WebDriver`를 사용해 자가진단 공식 웹사이트에 접속합니다.
+3. **가상 키패드 매핑 및 로그인**: 보안 상 랜덤하게 배치되는 가상 키패드 버튼의 `aria-label` 속성을 실시간으로 읽어와 비밀번호 입력을 수행합니다.
+4. **설문 작성 및 제출**: 지정된 기본 설문(이상 증상 없음 등) 항목에 일괄 체크 후 자가진단을 제출합니다.
+5. **결과 알림**: 정상 완료 여부를 Windows Alert 알림창 또는 Discord Bot 메시지를 통해 발송합니다.
 
 ## 🔗 참조 문서
 - [Selenium Documentation](https://www.selenium.dev/documentation/)
